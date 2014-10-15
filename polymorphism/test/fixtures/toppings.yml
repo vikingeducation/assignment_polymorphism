@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  toppable_id: 1
+  toppable_type: MyString
+
+two:
+  name: MyString
+  toppable_id: 1
+  toppable_type: MyString
