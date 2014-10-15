@@ -22,11 +22,10 @@ The output below sample output for all expected associations.  Additionally, the
 7)> b_parent.children << some_other_child
 8)> b_parent.children << some_child
 9)> a_parent.children_ids = [1,2,3,4]  # ids
-
-# de-associating
 10)> b_parent.children.delete(some_child)
 
-
+##Start:
+========
 
 1) > p=Pizza.first
   Pizza Load (0.3ms)  SELECT  "pizzas".* FROM "pizzas"   ORDER BY "pizzas"."id" ASC LIMIT 1
