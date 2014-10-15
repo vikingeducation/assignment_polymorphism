@@ -1,9 +1,22 @@
+#Polymorphism assignment
+================================
+
+Part of **Viking Code School**
+
+Description: This project is a miniature exercise to test knowledge of polymorphism in Rails.  In my example, I have two parent models, "Pizza" and "Sandwich", which each have a polymorhpic child, "Toppings".  
+
+
+The output below sample output for all expected associations.  Additionally, there's a miniature web interface with custom routes set up that shows this same information to the user in the browser
+
+
+=================
+
+
 
 1)> a_parent.children
 2)> b_parent.children
 3)> some_child.parents
 4)> some_other_child.parents
-
 5)> a_parent.children.build(attrs)
 6)> a_parent.children << some_child
 7)> b_parent.children << some_other_child
