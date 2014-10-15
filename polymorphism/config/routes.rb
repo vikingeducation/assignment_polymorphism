@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  resources :pizzas do
+    resources :toppings
+  end
+
+  resources :sandwiches do
+    resources :toppings
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
