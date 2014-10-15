@@ -25,6 +25,7 @@ end
   c.save
 end
 
+
 90.times do
   i = IceCreamScoop.new
   i.flavor = flavors.sample
@@ -32,7 +33,16 @@ end
 end
 
 
-IceCreamScoop.all.each do |i|
+cups = Cup.all
+cones = Cone.all
 
-
+IceCreamScoop.all.each do |scoop|
+  which_container = [:cups, :cones].sample
+  
+  case which_container
+  when :cups
+    scoop.containers << cups.sample
+  when :cones
+    scoop.containers << cones.sample
+  end
 end
