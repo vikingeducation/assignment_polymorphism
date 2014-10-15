@@ -9,7 +9,8 @@
 
 cone_kinds = ["waffle", "terrible cake-style", "sugar", "chocolate-dipped"]
 sizings = ["small", "medium", "large"]
-flavors = ["green tea", "dark chocolate", "rum raisin", "bacon caramel", "tobacco-mint julep", "orange blossom", "saffron-rosewater", "black sesame", "cardamom cinnamon"]
+flavors = ["green tea", "dark chocolate", "rum raisin", "bacon caramel", "tobacco-mint julep", 
+           "orange blossom", "saffron-rosewater", "black sesame", "cardamom cinnamon", "phlegm"]
 
 
 20.times do
