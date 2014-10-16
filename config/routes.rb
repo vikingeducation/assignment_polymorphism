@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+root 'ice_cream_scoops#index'
+
+  resources :cones do
+    resources :ice_cream_scoops
+  end
+
+  resources :cups do
+    resources :ice_cream_scoops
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
