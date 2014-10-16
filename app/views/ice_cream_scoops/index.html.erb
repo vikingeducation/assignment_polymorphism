@@ -1,0 +1,8 @@
+<% unless @container %>
+  <h1>Instructions</h1>
+  <p><em>go to /cones/:id/scoops or /cups/:id/scoops to see the ice cream scoops of an individual cone</em></p>
+<% end %>
+
+<% @scoops.each do |scoop| %>
+  <p><%= scoop.inspect %></p>
+<% end %>
