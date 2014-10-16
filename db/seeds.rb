@@ -39,11 +39,12 @@ cones = Cone.all
 
 IceCreamScoop.all.each do |scoop|
   which_container = [:cups, :cones].sample
-  
+
   case which_container
   when :cups
-    scoop.containers << cups.sample
+    scoop.container = cups.sample
   when :cones
-    scoop.containers << cones.sample
+    scoop.container = cones.sample
   end
+  scoop.save
 end
