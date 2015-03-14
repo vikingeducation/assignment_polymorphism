@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20150314000137) do
 
   create_table "elk_licenses", force: :cascade do |t|
+    t.string   "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -21,11 +22,16 @@ ActiveRecord::Schema.define(version: 20150314000137) do
   create_table "hunters", force: :cascade do |t|
     t.string   "name"
     t.string   "town"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "hunting_id"
+    t.string   "hunting_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
+  add_index "hunters", ["hunting_type", "hunting_id"], name: "index_hunters_on_hunting_type_and_hunting_id"
+
   create_table "moose_licenses", force: :cascade do |t|
+    t.string   "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
