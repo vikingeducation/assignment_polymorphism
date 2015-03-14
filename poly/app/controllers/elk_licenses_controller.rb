@@ -1,0 +1,2 @@
+class ElkLicensesController < ApplicationController
+end

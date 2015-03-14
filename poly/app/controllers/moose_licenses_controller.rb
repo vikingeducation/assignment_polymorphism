@@ -1,0 +1,2 @@
+class MooseLicensesController < ApplicationController
+end
