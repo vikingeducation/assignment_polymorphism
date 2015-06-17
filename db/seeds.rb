@@ -11,7 +11,8 @@ end
 
 20.times do
   i = Image.new
-  i.caption = Faker::Lorem.sentence
+  i.title = Faker::Hacker.adjective + ' ' + Faker::Hacker.noun
+  i.description = Faker::Lorem.sentence
   i.save!
 end
 

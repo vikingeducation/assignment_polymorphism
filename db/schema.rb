@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(version: 20150617184524) do
 
   create_table "images", force: :cascade do |t|
-    t.string   "caption"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tags", force: :cascade do |t|
