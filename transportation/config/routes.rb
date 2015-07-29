@@ -1,22 +1,4 @@
 Rails.application.routes.draw do
-
-
-  resources :intros do
-    resources :choruses
-  end
-
-  resources :verses do
-    resources :choruses
-  end
-
-  resources :bridges do
-    resources :choruses
-  end
-
-  resources :solos do
-    resources :choruses
-  end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
