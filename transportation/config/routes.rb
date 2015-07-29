@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   resources :trains do
-    resources :passengers
+    resources :passengers, :defaults => { :vessel => 'Train'}
   end
 
   resources :airplanes do
-    resources :passengers
+    resources :passengers, :defaults => { :vessel => 'Airplane'}
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
