@@ -18,6 +18,8 @@ Olga Avya
 
 class Picture 
 
+  belongs_to :likeable
+
   has_many :likes
 
 end
@@ -46,7 +48,7 @@ end
 
     #   table : "likes"
 #string    # likeable_type  Picture      Post    Link
-#int       # likeable_id     55             2       3
+#int       # likeable_id     55             2       3    
            # liker_id       
 
         table : pictures
