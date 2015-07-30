@@ -14,6 +14,6 @@ fields: id, company
 
 child-model: phone_number
 
-fields: id, number
+fields: id, number, callable_id, callable_type
 
 -- Xin Liu
