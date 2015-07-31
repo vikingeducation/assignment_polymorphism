@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  babysitterable_id: 1
+  babysitterable_type: MyString
+
+two:
+  name: MyString
+  babysitterable_id: 1
+  babysitterable_type: MyString
