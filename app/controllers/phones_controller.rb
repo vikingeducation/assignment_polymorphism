@@ -4,6 +4,10 @@ class PhonesController < ApplicationController
     @phones = extract_callable.phones
   end
 
+  def show
+    @phone = Phone.find(params[:id])
+  end
+
   private
 
   def extract_callable
