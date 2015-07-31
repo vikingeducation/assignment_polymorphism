@@ -1,0 +1,11 @@
+
+<h2>Likes for <%=@parent.class %> with ID <%=@parent.id %></h2>
+<table>
+<% @parent.likes.each do |like|%>
+<tr>
+  <td>Like id is <%=like.id %></td>
+<br>
+  <td>User id is <%=like.user_id %></td>
+</tr>
+<% end %>
+</table>
