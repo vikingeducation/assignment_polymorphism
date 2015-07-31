@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  resources :links do
+    resources :likes, :defaults => { :likeable => 'Link' }
+  end
+
+  resources :posts do
+    resources :likes, :defaults => { :likeable => 'Post' }
+  end
+
+  resources :pictures do
+    resources :likes, :defaults => { :likeable => 'Picture' }
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
