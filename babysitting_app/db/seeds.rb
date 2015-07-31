@@ -16,7 +16,7 @@ needs_babysitting = []
 
 end
 
-6.times do
+20.times do
   babysat = needs_babysitting.sample
   Babysitter.create( name: Faker::Name.name,
                 babysitterable_id: babysat.id,

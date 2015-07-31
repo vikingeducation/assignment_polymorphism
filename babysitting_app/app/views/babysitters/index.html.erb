@@ -1,0 +1,6 @@
+<h2>Babysitter Index</h2>
+<% @babysitters.each do |babysitter| %>
+  <p><%=babysitter.name %> babysits
+    <%=babysitter.babysitterable.class%>
+    <%=babysitter.babysitterable.name%> </p>
+<% end %>

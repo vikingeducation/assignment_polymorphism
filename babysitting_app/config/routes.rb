@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  resources :dogs do
+    resources :babysitters, defaults: { babysitterable: 'Dog'}
+  end
+
+  resources :babies do
+    resources :babysitters, defaults: { babysitterable: 'Baby'}
+  end
+
+  resources :adults do
+    resources :babysitters, defaults: { babysitterable: 'Adult'}
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
