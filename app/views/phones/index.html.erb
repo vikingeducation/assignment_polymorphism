@@ -1,0 +1,19 @@
+<h1>Phone Numbers</h1>
+<table class="table-hover">
+  <tr>
+    <th>ID</th>
+    <th>Phone Number</th>
+    <th>Callable Type</th>
+    <th>Callable ID</th>
+    <th>Show</th>
+  </tr>   
+  <% @phones.each do |p| %>
+    <tr>
+      <td><%= p.id %></td>
+      <td><%= p.number %></td>
+      <td><%= p.callable_type %></td>
+      <td><%= p.callable_id %></td>
+      <td><%= link_to "Show", [p.callable, p]%></td>
+    </tr>
+  <% end %>
+</table>
