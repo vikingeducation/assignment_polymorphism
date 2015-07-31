@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
   resources :dogs do
-    resources :babysitters, defaults: { babysitterable: 'Dog'}
+    resources :babysitters, defaults: { thing_type: 'Dog'}
   end
 
+  #note can call defaults ANYTHING! does not have to match column
   resources :babies do
-    resources :babysitters, defaults: { babysitterable: 'Baby'}
+    resources :babysitters, defaults: { thing_type: 'Baby'}
   end
 
   resources :adults do
-    resources :babysitters, defaults: { babysitterable: 'Adult'}
+    resources :babysitters, defaults: { thing_type: 'Adult'}
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
