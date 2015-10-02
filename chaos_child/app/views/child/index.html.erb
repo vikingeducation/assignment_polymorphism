@@ -1,0 +1,10 @@
+<%@children.each do |child|%>
+
+  <h2>ID: <%=child.id%></h2>
+  <h2>NAME: <%=child.name%></h2>
+  <h2>parents_id: <%=child.parents_id%></h2>
+  <h2>parents_type: <%=child.parents_type%></h2>
+  <h3><%=link_to"show page", [child.parents, child]%></h3>
+  </br>
+
+<%end%>
