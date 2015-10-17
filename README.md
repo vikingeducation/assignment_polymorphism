@@ -9,7 +9,9 @@ The `Rating` model has columns to store the ID and type of the ratable model. Th
 
 Each ratable is given an association of `has_many :ratings, :as => :ratable, :dependent => :destroy`. This allows fetching of all the associated ratings and destroys the dependent rows when the parent is destroyed.
 
-As an added bonus, this project uses [Bootstrap glyphicons](http://getbootstrap.com/components/#glyphicons) for the rating star icons as well as provides a method on each ratable model for the average rating.
+As an added bonus, this project uses [Bootstrap glyphicons](http://getbootstrap.com/components/#glyphicons) for the rating star icons as well as provides a method on each ratable model for the average rating (for each instance). The average rating functionality is kept DRY by offloading the generation of the average to the `Rating` model and simply passing it the ratable ID and type.
+
+# Schema
 
 ### Rating
 - value
