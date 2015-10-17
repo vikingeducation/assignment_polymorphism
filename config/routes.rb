@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :ratings, :only => [:index]
+
+  resources :hotels, :only => [:index] do
+    resources :ratings, :only => [:index],
+                        :defaults => {:ratable => 'Hotel'}
+  end
+  resources :airlines, :only => [:index] do
+    resources :ratings, :only => [:index],
+                        :defaults => {:ratable => 'Airline'}
+  end
+
+  root :to => 'ratings#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,12 @@
+<h1>Hotels</h1>
+
+<ul>
+  <% @hotels.each do |hotel| %>
+    <div class="hotel">
+      <h2>
+        Name : <%= link_to(hotel.name, hotel_ratings_path(hotel)) %>
+      </h2>
+      <%= rating_stars_for(hotel.rating) %>
+    </div>
+  <% end %>
+</ul>
