@@ -1,0 +1,12 @@
+<h1>Airlines</h1>
+
+<ul>
+  <% @airlines.each do |airline| %>
+    <div class="airline">
+      <h2>
+        Name : <%= link_to(airline.name, airline_ratings_path(airline)) %>
+      </h2>
+      <%= rating_stars_for(airline.rating) %>
+    </div>
+  <% end %>
+</ul>

@@ -1,0 +1,17 @@
+<nav>
+  <ul class="nav nav-tabs">
+    <%
+    [
+      ['Hotels', hotels_path],
+      ['Airlines', airlines_path],
+      ['Ratings', ratings_path]
+    ].each do |link|
+      text = link[0]
+      path = link[1]
+    %>
+      <li role="presentation">
+        <%= link_to(text, path) %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
