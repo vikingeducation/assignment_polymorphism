@@ -1,0 +1,9 @@
+<p>
+  Reviews for <%= @parent.name %> (<%= @parent.class %>)
+</p>
+<% @parent.reviews.each do |review| %>
+  <p>
+    Rating: <%= review.rating %><br>
+    Review: <%= review.body %>
+  </p>
+<% end %>
