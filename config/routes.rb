@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  resources :buzzs do
+    # Now the `:votable` key is present in `params`!
+    resources :votes, :defaults => { :votable => 'Buzz' }, only: [:index]
+  end
+
+  resources :smarts do
+    resources :votes, :defaults => { :votable => 'Smart' }, only: [:index]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
