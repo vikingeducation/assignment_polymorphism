@@ -1,0 +1,18 @@
+<h1>Tech BS Phrases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @smarts.each do |smart| %>
+      <tr>
+        <td><%= smart.phrase %></td>
+        <td><%= link_to smart.votes.count, smart_votes_path(smart) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

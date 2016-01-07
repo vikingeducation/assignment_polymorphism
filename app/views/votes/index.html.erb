@@ -1,0 +1,19 @@
+<h1>Vote Details for...<br>
+ <em>"<%= @object.phrase %>"</em></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Vote Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @votes.each do |vote| %>
+      <tr>
+        <td><%= vote.user.name %></td>
+        <td><%= vote.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
