@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'smarts#index'
+
   resources :buzzs do
     # Now the `:votable` key is present in `params`!
     resources :votes, :defaults => { :votable => 'Buzz' }, only: [:index]

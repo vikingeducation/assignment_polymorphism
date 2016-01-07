@@ -1,0 +1,18 @@
+<h1>Company BS Buzz-Phrases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @buzzs.each do |buzz| %>
+      <tr>
+        <td><%= buzz.phrase %></td>
+        <td><%= link_to buzz.votes.count, buzz_votes_path(buzz) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
