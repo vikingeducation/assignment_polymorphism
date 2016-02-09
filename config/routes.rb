@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
   resources :magazines do
-    resources :articles
+    resources :articles, :defaults => { :articleable => 'Magazine' }
   end
+
   resources :newspapers do
-    resources :articles
+    resources :articles,  :defaults => { :articleable => 'Newspaper' }
   end
 
 
-  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

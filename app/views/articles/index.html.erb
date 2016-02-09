@@ -1,7 +1,9 @@
 
 <h1> All Articles </h1>
-<%= @articles.each do |article| %>
-  <%= article.articleable_type %>,  <%= article.title %>, <%= article.body %>
+<% @articles.each do |article| %>
+  <p><%= article.articleable_type %></p><br/>
+  <p><%= article.title %></p><br/>
+  <p><%= article.body %></p><br/><br/>
 <% end %>
 
 
