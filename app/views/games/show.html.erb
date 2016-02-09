@@ -1,0 +1,4 @@
+<h1><%= @game.title %></h1>
+<h3>Genre: <%= @game.genre %></h3>
+<h3>Platform: <%= @game.platform %></h3>
+<%= link_to 'Reviews', game_reviews_path(@game) %>
