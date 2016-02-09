@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   resources :articles do
-    resources :tags, defaults: { commentable: "Article" } 
+    resources :tags, defaults: { taggable: "Article" } 
   end
 
   resources :comments do
-    resources :tags, defaults: { commentable: "Comment" }
+    resources :tags, defaults: { taggable: "Comment" }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

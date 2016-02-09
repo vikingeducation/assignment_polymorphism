@@ -2,9 +2,9 @@ class TagsController < ApplicationController
 
 
   def index
-    if params[:commentable] == "Article"
+    if params[:taggable] == "Article"
       @parent = Article.find(params[:article_id])
-    elsif params[:commentable] == "Comment"
+    elsif params[:taggable] == "Comment"
       @parent = Comment.find(params[:comment_id])
     end
     @tags = @parent.tags
