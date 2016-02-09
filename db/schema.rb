@@ -14,15 +14,15 @@
 ActiveRecord::Schema.define(version: 20160209181845) do
 
   create_table "articles", force: :cascade do |t|
-    t.integer  "parent_id"
-    t.string   "parent_type"
+    t.integer  "articleable_id"
+    t.string   "articleable_type"
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
-  add_index "articles", ["parent_type", "parent_id"], name: "index_articles_on_parent_type_and_parent_id"
+  add_index "articles", ["articleable_type", "articleable_id"], name: "index_articles_on_articleable_type_and_articleable_id"
 
   create_table "magazines", force: :cascade do |t|
     t.string   "name"
