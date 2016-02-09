@@ -2,11 +2,10 @@ class TagsController < ApplicationController
 
 
   def index
-    if params[:taggable] == "Article"
-      @parent = Article.find(params[:article_id])
-    elsif params[:taggable] == "Comment"
-      @parent = Comment.find(params[:comment_id])
-    end
+    parent_class = params[:taggable].constantize
+    parent_sym = (params[:taggable] + "_id").downcase.to_sym
+    @parent = parent_class.find(params[parent_sym])
+
     @tags = @parent.tags
   end
 
