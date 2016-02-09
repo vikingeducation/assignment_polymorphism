@@ -1,0 +1,12 @@
+Hirb.enable
+a_1 = Articles.first
+a_last = Articles.last
+n_1 = Newspaper.first
+n_last = Newspaper.last
+m_1 = Magazine.first
+m_last = Magazine.last
+
+a_1.articleable
+a_last.articleable
+n_1.articles
+m_1.articles
