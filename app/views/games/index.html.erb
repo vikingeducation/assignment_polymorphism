@@ -1,0 +1,7 @@
+<% @games.each do |game| %>
+  <h3><%= link_to game.title, game_path(game) %></h3>
+<% end %>
+<br>
+<br>
+<br>
+<h2><%= link_to 'Movie Index', movies_path %></h2>

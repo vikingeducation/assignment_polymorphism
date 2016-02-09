@@ -1,0 +1,4 @@
+<h1><%= @movie.title %></h1>
+<h3>Genre: <%= @movie.genre %></h3>
+<h3>Length: <%= @movie.length %> minutes</h3>
+<%= link_to 'Reviews', movie_reviews_path(@movie) %>
