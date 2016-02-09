@@ -10,6 +10,12 @@
   Person.create(name: Faker::Name.name)
 end
 
+10.times do
+  Gun.create(name: Faker::Commerce.product_name)
+  Knife.create(name: Faker::Commerce.product_name)
+  Candlestick.create(name: Faker::Commerce.product_name)
+end
+weapons = Gun.all + Knife.all + Candlestick.all
 
 25.times do
   murd = Person.all.sample
@@ -17,5 +23,7 @@ end
 
   unless murd == vic
     vic.murderers << murd
+    murd.committed_murders.sample.weapon = weapons.sample
+    murd.save
   end
 end

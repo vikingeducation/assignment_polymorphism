@@ -1,0 +1,6 @@
+<h1><%= @weapon %></h1>
+
+
+<% @murderings.each do |murder| %>
+<%= murder.murderer.name %> used this weapon on <%= murder.victim.name %>
+<% end %>

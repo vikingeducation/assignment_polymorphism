@@ -1,0 +1,2 @@
+class CandlesticksController < ApplicationController
+end

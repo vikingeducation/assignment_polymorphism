@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Weapon ID</th>
+      <th>Weapon Name</th>
+      <th>Show Murders</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weapons.each do |weapon| %>
+    <tr>
+      <td><%= weapon.id %></td>
+      <td><%= weapon.name %></td>
+      <td><%= link_to "Show Murders", weapon_murders_path(weapon.class.table_name, weapon) %></td>
+    <% end %>
+  </tbody>
+</table>

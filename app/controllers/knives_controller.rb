@@ -1,0 +1,2 @@
+class KnivesController < ApplicationController
+end
