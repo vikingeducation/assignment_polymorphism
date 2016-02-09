@@ -1,8 +1,9 @@
-<h1><%= "#{@parent} #{@parent.id}" %></h1>
+<h1><%= "#{@reviewable.class} ID: #{@reviewable.id}" %></h1>
 
-<p><%= @parent.name %></p>
+<p><%= "#{@reviewable.class} Name: #{@reviewable.name}" %></p>
 
-<% @reviews.each do |r| %> 
- <h3><%= "Author ID:  #{r.author_id}" %></h3>
+<h2>Reviews</h2>
+<% @reviews.each do |r| %>
+  <h3><%= "Author ID:  #{r.author_id}" %></h3>
   <p><%= "Review: #{r.body}" %></p>
 <%end%>
