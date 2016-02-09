@@ -1,0 +1,9 @@
+<h5>Tags for Parent: <%= @parent.id %></h5>
+<h4>Comment or Article: <%= @parent.body %></h4>
+
+<h3>Here are the tags:</h3>
+<ul>
+  <% @tags.each do |tag| %>
+    <li><%= tag.tag_text %></li>
+  <% end %>
+</ul>
