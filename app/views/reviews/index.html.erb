@@ -1,0 +1,8 @@
+<h1><%= "#{@parent} #{@parent.id}" %></h1>
+
+<p><%= @parent.name %></p>
+
+<% @reviews.each do |r| %> 
+ <h3><%= "Author ID:  #{r.author_id}" %></h3>
+  <p><%= "Review: #{r.body}" %></p>
+<%end%>

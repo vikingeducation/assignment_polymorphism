@@ -8,8 +8,9 @@
 
 puts "Destroying Old Data"
 
-User.destroy_all
-Following.destroy_all
+Employee.destroy_all
+Manager.destroy_all
+Review.destroy_all
 
 puts  "Old Data Successfully Deleted"
 
@@ -31,13 +32,14 @@ def generate_review
   r = Review.new
   r.author_id = Manager.pluck(:id).sample
   r.body = Faker::Lorem.sentence
-  if (0..1).rand == 0
+  if rand(0..1) == 0
     r.reviewable_id = Manager.pluck(:id).sample
-    r.reviewable_type = Manager.class.to_s
+    r.reviewable_type = Manager.to_s
   else
     r.reviewable_id = Employee.pluck(:id).sample
-    r.reviewable_type = Employee.class.to_s
+    r.reviewable_type = Employee.to_s
   end
+  r.save
 end
 
 puts "generating Employees"
