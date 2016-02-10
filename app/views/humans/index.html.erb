@@ -1,0 +1,6 @@
+
+<h1><%= "A #{@animal_type} named #{@animal.name}" %></h1>
+<h2><%= "Has #{@humans.size} #{'human'.pluralize(@humans.size)}:" %></h2>
+<% @humans.each do |human| %>
+  <p><%= human.name %></p>
+<% end %>
