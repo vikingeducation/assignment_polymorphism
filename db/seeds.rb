@@ -22,7 +22,7 @@ end
 
 def generate_vending_machines
   v = VendingMachine.new
-  v[:latitutde] = Faker::Address.latitude
+  v[:latitude] = Faker::Address.latitude
   v[:longitude] = Faker::Address.longitude
   v.save
 end
