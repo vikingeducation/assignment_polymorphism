@@ -51,6 +51,9 @@ t.string :name, :null => false
 t.string :latitude :null => false
 t.string :longitude :null => false
 
+4. Set up the necessary polymorphic associations.
+
+5. Build a very basic seeds file which populates your database with a selection of parents and children. This will give you practice creating with polymorphic relationships.
 
 
 
