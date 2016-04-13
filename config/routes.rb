@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   resources :restaurants do
-    resources :items
+    resources :items, :defaults => { :commentable => 'Restaurant' }
   end
 
   resources :vending_machines do
-    resources :items
+    resources :items, :defaults => { :commentable => 'VendingMachine' }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
