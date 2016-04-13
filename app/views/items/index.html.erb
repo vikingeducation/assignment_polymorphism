@@ -1,1 +1,7 @@
-<h1>Hello Angel</h1>
+<h1><%= params[:vendor_type] %>: <%= params["#{params[:vendor_type].downcase}_id"] %></h1>
+<h3>Items</h3>
+<ul>
+	<% @items.each do |item| %>
+		<li><%= item.name %></li>
+	<% end %>
+</ul>
