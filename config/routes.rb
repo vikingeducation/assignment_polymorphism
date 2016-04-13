@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
+  # The defaults will make the params for the parent object accessible (well just the model name and the id).
   resources :restaurants do
-    resources :items, :defaults => { :commentable => 'Restaurant' }
+    resources :items, :defaults => { :vendor_type => 'Restaurant' }
   end
 
   resources :vending_machines do
-    resources :items, :defaults => { :commentable => 'VendingMachine' }
+    resources :items, :defaults => { :vendor_type => 'VendingMachine' }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
