@@ -1,0 +1,15 @@
+<h2>List of Photos</h2>
+
+<ul>
+<% @photos.each do |photo| %>
+	<li>link: <%= photo.photo_link %></li>
+	<li>description: <%= photo.description %></li>
+
+	<% if photo.photoable.is_a? Product %>
+		<li>parent: <%= photo.photoable.title %></li>
+	<% else %>
+		<li>parent: <%= photo.photoable.name %></li>
+	<% end %>
+	<li>id and type: <%= "#{photo.photoable_id} / #{photo.photoable_type}" %></li>
+<% end %>
+</ul>
