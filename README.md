@@ -1,3 +1,9 @@
+tags by David and Matt
+
+
+"A photo can have many user_tags, as can a post and location."
+
+
 assignment_polymorphism
 =======================
 
