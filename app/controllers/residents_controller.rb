@@ -1,6 +1,8 @@
 class ResidentsController < ApplicationController
   def index
-    @residency = params[:residency].classify.constantize.find(params[:house_id])
+    type = params[:residency]
+    type_id = "#{type}_id".downcase.to_sym
+    @residency = type.classify.constantize.find(params[type_id])
     @residents = @residency.residents
   end
 end
