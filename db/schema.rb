@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808210308) do
+ActiveRecord::Schema.define(version: 20160808215208) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,6 @@ ActiveRecord::Schema.define(version: 20160808210308) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "tags", ["taggable_id", "taggable_type"], name: "index_tags_on_taggable_id_and_taggable_type", unique: true
+  add_index "tags", ["taggable_id", "taggable_type"], name: "index_tags_on_taggable_id_and_taggable_type"
 
 end

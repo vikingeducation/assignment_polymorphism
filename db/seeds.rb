@@ -16,21 +16,17 @@ SEEDS = 10
 # seed Posts
 SEEDS.times do 
   post = Post.create(:body => Faker::Lorem.paragraph(1))
-  tags = []
   (SEEDS/2).times do 
-    tags << Tag.create(:name => Faker::Name.name)
+    post.tags.create(:name => Faker::Name.name)
   end
-  post.tags = tags
 end
 
 # seed photos
 SEEDS.times do 
   photo = Photo.create(:caption => Faker::Lorem.sentence(1), :source => Faker::Internet.url)
-  tags = []
   (SEEDS/2).times do 
-    tags << Tag.create(:name => Faker::Name.name)
+    photo.tags.create(:name => Faker::Name.name)
   end
-  photo.tags = tags
 end
 
 # seed photos
@@ -38,9 +34,8 @@ SEEDS.times do
   location = Location.create(:name => Faker::Address.city)
   tags = []
   (SEEDS/2).times do 
-    tags << Tag.create(:name => Faker::Name.name)
+    location.tags.create(:name => Faker::Name.name)
   end
-  location.tags = tags
 end
 
 

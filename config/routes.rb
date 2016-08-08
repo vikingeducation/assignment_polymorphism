@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  resources :posts do
+    resources :tags, :defaults => {:taggable => 'Post'}
+  end
+
+  resources :photos do
+    resources :tags, :defaults => {:taggable => "Photo"}
+  end
+
+  resources :locations do
+    resources :tags, :defaults => {:taggable => "Location"}
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
