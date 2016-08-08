@@ -1,0 +1,8 @@
+<h1>Residency: <%= @residency.name %></h1>
+
+<h1>Type: <%= @residency.class %></h1>
+
+<h3>Residents: </h3>
+<% @residents.each do |resident| %>
+  <h3><%= resident.name %></h3>
+<% end %>
