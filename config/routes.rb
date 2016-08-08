@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  #root to: 'residents#index'
+
+  resources :houses do
+    resources :residents, defaults: { residency: 'House' }
+  end
+
+  resources :apartments do
+    resources :residents, defaults: { residency: 'Apartment' }
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
