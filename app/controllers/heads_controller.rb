@@ -1,8 +1,10 @@
 class HeadsController < ApplicationController
 
   def index
-    resource, id = request.path.split('/')[1,2]
-    @parent = params[:commentable].classify.constantize.find(params[id])
+    model = params[:headable].classify.constantize
+    headable_id = params["#{model.model_name.param_key}_id".to_sym]
+    # headable_chars = params[:headable].classify.constantize
+    @parent = model.find(headable_id)
   end
 
 end
