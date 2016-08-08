@@ -1,3 +1,3 @@
 class Cat < ApplicationRecord
-  has_one :heads, as: :headable
+  has_many :heads, as: :headable
 end
