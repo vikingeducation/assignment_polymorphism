@@ -1,0 +1,5 @@
+<% @humen.each do |human| %>
+  <% human.heads.each_with_index do |head, i| %>
+    <%= link_to "Head ##{i + 1}", humen_head_path(human, head) %>
+  <% end %>
+<% end %>
