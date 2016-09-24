@@ -1,0 +1,6 @@
+<h2>Parent : <%= @commentable %></h2>
+
+Comments
+<% @comments.each do |c| %>
+<p><%= c.body %></p>
+<% end %>
