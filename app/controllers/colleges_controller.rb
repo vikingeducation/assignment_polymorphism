@@ -1,4 +1,4 @@
-class TeachersController < ApplicationController
+class CollegesController < ApplicationController
 
   def index
     @teachers = extract_institution.teachers
