@@ -1,11 +1,6 @@
 class CollegesController < ApplicationController
 
   def index
-    @teachers = extract_institution.teachers
+    @colleges = College.all
   end
-
-  private
-    def extract_institution
-      params[:institution].classify.find(params[:id])
-    end
 end
