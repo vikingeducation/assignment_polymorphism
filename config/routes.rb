@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'engines/index'
+
+  resources :cars do
+    resources :engines
+  end
+
+  resources :motorcycles do
+    resources :engines
+  end
 end
