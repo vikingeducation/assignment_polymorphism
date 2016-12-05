@@ -6,3 +6,9 @@ Cheer time! When I say "Poly", you say "Morphic", "Gon", "Vore", "Glot" or whate
 [James Harris](https://github.com/domarp-j/)
 [Pramod Jacob](https://github.com/DawnPaladin/)
 
+Parent Models
+=> Dog
+=> Cat
+
+Child Model 
+=> Collar 
