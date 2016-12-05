@@ -1,0 +1,2 @@
+module CollarHelper
+end
