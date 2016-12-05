@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning out music collection"
+
+Song.destroy_all
+Mp3.destroy_all
+Record.destroy_all
+Cd.destroy_all
+
+@media_array = []
+
+puts "Mp3"
+5.times do
+  @media_array << Mp3.create!
+end
+
+puts "Burning blank discs"
+5.times do
+  @media_array << Cd.create!
+end
+
+puts "Recording"
+5.times do
+  @media_array << Record.create!
+end
+
+puts "Making music"
+25.times do
+  sampled = @media_array.sample
+  Song.create!(name: "#{Faker::Hipster.word.capitalize}'s #{Faker::Music.instrument}", medium_id: sampled.id, medium_type: sampled.type)
+end

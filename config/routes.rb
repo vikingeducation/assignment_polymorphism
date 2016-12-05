@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :mp3 do
+    resources :songs, :defaults => { :medium => 'Mp3' }
+  end
+
+  resources :record do
+    resources :songs, :defaults => { :medium => 'Record' }
+  end
+
+  resources :cd do
+    resources :songs, :defaults => { :medium => 'Cd' }
+  end
+
 end
