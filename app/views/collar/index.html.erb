@@ -1,0 +1,10 @@
+<h1>Collar index</h1>
+
+Collar is on a <%= @animal.class %>
+
+<% @collars.each do |collar| %>
+  <ul>
+    <li>Name: <%= collar.name %></li>
+    <li>Phone: <%= collar.phone %></li>
+  </ul>
+<% end %>

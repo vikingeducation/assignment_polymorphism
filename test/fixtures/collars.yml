@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone: MyString
+  collarable_id: 1
+  collarable_type: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  collarable_id: 1
+  collarable_type: MyString
