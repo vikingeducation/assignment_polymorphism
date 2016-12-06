@@ -11,8 +11,8 @@ Cat.destroy_all
 Dog.destroy_all
 Collar.destroy_all
 
-NUM_PET_TYPE = 5
-NUM_COLLARS = 5
+NUM_PET_TYPE = 25
+NUM_COLLARS = 100
 
 puts "Creating cats and dogs..."
 NUM_PET_TYPE.times do 
@@ -33,7 +33,6 @@ NUM_COLLARS.times do
     collarable_id: animal.id, 
     collarable_type: animal.class
   )
-  p collar
 end
 
 puts "Done!"
