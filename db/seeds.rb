@@ -8,14 +8,16 @@
 
 movements = ["swim", "walk", "run", "fly"]
 
+animals = []
+animals << d = Deer.create(name: 'Bob')
 
-d = Deer.create(name: 'Bob')
+animals << f = Fish.create(name: 'Nemo')
 
-f = Fish.create(name: 'Nemo')
+animals << b = Bird.create(name: 'birdperson')
 
-b = Bird.create(name: 'birdperson')
+movements = ["swim", "walk", "run", "fly"]
 
-
-
-
-d.build.create
+movements.each do |m|
+  a = animals.sample
+  Movement.create(name: m, moveable_id: a.id, moveable_type: a.class )
+end
