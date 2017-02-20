@@ -1,0 +1,7 @@
+<h1> Products For <%= "#{@parent_type} #{@parent.id}" %></h1>
+
+<ul>
+<% @products.each do |product| %>
+	<li><%= product.name %></li>
+<% end %>
+</ul>
