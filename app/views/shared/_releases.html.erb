@@ -1,0 +1,7 @@
+<h2><%= title %></h2>
+<ul>
+<% releases.each do |r| %>
+<li><%= link_to r.title, [r, :songs]  %></li>
+<% end %>
+</ul>
+
