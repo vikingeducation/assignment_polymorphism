@@ -1,0 +1,9 @@
+<%= "#{@release.class.name}: #{@release.title}" %>
+<ul>
+<% @songs.each do |song| %>
+<li><%= song.title %></li>
+<% end %>
+</ul>
+
+<%= link_to "Albums", albums_path %>
+<%= link_to "Singles", singles_path %>
