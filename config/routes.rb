@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+
+  resources :photos do
+    resources :comments, :defaults => { :commentable => 'Photo' }
+  end
+
+  resources :articles do
+    resources :comments, :defaults => { :commentable => 'Post' }
+  end
+
 end
