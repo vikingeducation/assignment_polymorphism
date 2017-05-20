@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
 
-  belongs_to :authors
-  has_many :comments, :as => :commentable
+  belongs_to :author
+  has_many :comments, :as => :commentable, :dependent => :nullify
 
 end
