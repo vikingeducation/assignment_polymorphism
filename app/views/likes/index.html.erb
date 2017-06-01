@@ -1,0 +1,18 @@
+<h1>
+  Likes
+  <% if @likable %>
+    <small>For <%= @likable %></small>
+  <% end %>
+</h1>
+
+<table>
+  <tr>
+    <th>id</th> <th>user</th>
+  </tr>
+<% @likes.each do |like| %>
+  <tr>
+    <td><%= like.id %></td>
+    <td><%= like.user.username %></td>
+  </tr>
+<% end %>
+</table>
