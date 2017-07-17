@@ -1,26 +1,23 @@
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is an implemented example of a the polymorphic relationship between the child model 'address' and parents 'client', 'vendor', and 'employee'.  
+The root page displays all addresses for a given parent type (client, vendor, or employee)
+The results.md file will show the terminal output for the following exercises:
+# simple association methods
+> a_parent.children
+> b_parent.children
+> some_child.parents
+> some_other_child.parents
 
-Things you may want to cover:
+# re-assigning and adding to associations
+> a_parent.children.build(attrs)
+> a_parent.children << some_child
+> b_parent.children << some_other_child
+> b_parent.children << some_child
+> a_parent.children_ids = [1,2,3,4]  # ids
 
-* Ruby version
+# de-associating
+> b_parent.children.delete(some_child)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 =======
 assignment_polymorphism
 =======================
