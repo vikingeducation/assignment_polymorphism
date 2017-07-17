@@ -1,0 +1,7 @@
+  <h3>Addresses:</h3>
+  <% @addresses.each do |a| %>
+    <br/>
+    <h4><%= a.street_address %></h4>
+    <h4><%= a.city %>, <%= a.state_abbr %> <%= a.zip %></h4>
+    <h6>address id: <%= a.id %></h6>
+  <% end %>

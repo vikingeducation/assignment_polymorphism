@@ -6,6 +6,6 @@ class AddressesController < ApplicationController
   private
   def extract_stored_address
     resource, id = request.path.split('/')[1,2]
-    resource.singularize.classity.constantize.find(id)
+    resource.singularize.classify.constantize.find(id)
   end
 end
