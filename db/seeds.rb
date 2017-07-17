@@ -26,8 +26,8 @@ end
 #Create Clients
 puts "Creating 10 clients..."
 10.times do |i|
-  Client.create(name: Faker::Name.name)
-  generate_location("client", i)
+  Client.create(name: Faker::Company.name)
+  generate_location("Client", i + 1)
 end
 puts "10 clients created."
 
@@ -35,7 +35,7 @@ puts "10 clients created."
 puts "Creating 10 employees..."
 10.times do |i|
   Employee.create(name: Faker::Name.name)
-  generate_location("employee", i)
+  generate_location("Employee", i + 1)
 end
 puts "10 employees created."
 
@@ -43,7 +43,7 @@ puts "10 employees created."
 puts "Creating 10 vendors..."
 10.times do |i|
   Vendor.create(name: Faker::Company.name)
-  generate_location("vendor", i)
+  generate_location("Vendor", i + 1)
 end
 puts "10 vendors created."
 puts "Record creation complete."
