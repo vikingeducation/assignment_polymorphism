@@ -1,0 +1,5 @@
+<h1>Students for <%= @resource %> with ID: <%= @resource_id %></h1>
+
+<% @students.each do |student| %>
+  <p><%= student.name %></p>
+<% end %>
