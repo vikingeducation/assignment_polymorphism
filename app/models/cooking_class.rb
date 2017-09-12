@@ -1,3 +1,3 @@
 class CookingClass < ApplicationRecord
-  has_many :aspiring_cooks, as: :enrollable
+  has_many :students, as: :enrollable
 end

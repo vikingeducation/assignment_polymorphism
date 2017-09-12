@@ -1,3 +1,3 @@
 class University < ApplicationRecord
-  has_many :undergraduates, as: :enrollable
+  has_many :students, as: :enrollable
 end
