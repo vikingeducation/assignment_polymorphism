@@ -1,3 +1,3 @@
 class CookingClass < ApplicationRecord
-  has_many :students, as: :enrollable
+  has_many :students, as: :enrollable, dependent: :destroy
 end
