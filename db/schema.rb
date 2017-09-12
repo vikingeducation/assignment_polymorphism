@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912055516) do
+ActiveRecord::Schema.define(version: 20170912055709) do
 
   create_table "cooking_classes", force: :cascade do |t|
     t.string "location"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20170912055516) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["commentable_id", "commentable_type"], name: "index_students_on_commentable_id_and_commentable_type"
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
