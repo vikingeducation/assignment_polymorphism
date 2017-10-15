@@ -1,0 +1,12 @@
+<h1>Addresses</h1>
+
+
+<% @addresses.each do |address| %>
+  <p>Street address: <%= address.street_address %></p>
+  <p>Address 2: <%= address.address_line_2 %></p>
+  <p>Postcode: <%= address.postcode %></p>
+  <p>Parent ID: <%= address.addressable_id %></p>
+  <p>Parent type: <%= address.addressable_type %></p>
+  
+  </br>
+<% end %>
