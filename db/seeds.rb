@@ -15,16 +15,15 @@ Company.destroy_all
 Address.destroy_all
 
 
-def generate_address(address_type, address_type_id)
+def generate_address(model)
   addr = Address.new(:street_address => Faker::Address.street_address,
                   :address_line_2 => Faker::Address.community,
                   :postcode => Faker::Address.zip_code,
-                  :addressable_id => address_type_id,
-                  :addressable_type => address_type)
+                  :addressable => model)
   addr.save!
 end
 
-# puts "creating addresses"
+puts "creating addresses"
 
 puts "creating people and address for each person"
 20.times do
@@ -47,26 +46,18 @@ puts "creating companies and address for each person"
   generate_address("Company", c.id)
 end
 
-# addr_types = ["person", "company"]
+# addr_types = ["Person", "Company"]
 
 # addr_types.each do |addr_type|
-#   addr_id = ""
+#   addr_id = addr_type.constantize.all.sample.id
 
-#   if(addr_type == "person")
-#     addr_id = Person.all.sample.id
-#   else
-#     puts "It is a address type company"
-#     addr_id = Company.all.sample.id
+#   20.times do |a|
+#     addr = Address.new(:street_address => Faker::Address.street_address,
+#                     :address_line_2 => Faker::Address.community,
+#                     :postcode => Faker::Address.zip_code,
+#                     :addressable_id => addr_id,
+#                     :addressable_type => addr_type
+#     addr.save!
 #   end
-
-
-  # 20.times do |a|
-  #   addr = Address.new(:street_address => Faker::Address.street_address,
-  #                   :address_line_2 => Faker::Address.community,
-  #                   :postcode => Faker::Address.zip_code,
-  #                   :addressable_id => addr_id,
-  #                   :addressable_type => addr_type
-  #   addr.save!
-  # end
 # end
 
