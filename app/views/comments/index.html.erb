@@ -1,0 +1,16 @@
+<h4>All Comments for Photo/Article</h4>
+
+<h5><%= "None" if @comment.nil?  %></h5>
+
+<% @comments.each do |c| %>
+    <h6><%= c.author_name %></h6>
+    <p><%= c.body %></p>
+<% end %>
+
+
+
+<br><br><br><br><br>
+Request - <%= request  %><br>
+Path - <%= request.path  %>
+
+
