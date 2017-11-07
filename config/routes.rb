@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :labs do
+    resources :teaching_assistants, defaults: { teach_duty: 'Lab' }
+  end
+
+  resources :courses do
+    resources :teaching_assistants, defaults: { teach_duty: 'Course' }
+  end
 end
