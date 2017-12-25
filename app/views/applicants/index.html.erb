@@ -1,0 +1,7 @@
+<h1>Applicants</h1>
+
+<ul>
+  <% @applicants.each do |applicant| %>
+  <li><%= link_to applicant.name, applicant_tags_path(applicant) %></li>
+  <% end %>
+</ul>

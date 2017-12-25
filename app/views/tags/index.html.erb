@@ -1,0 +1,17 @@
+<h1>Tags</h1>
+
+<h2><%= @parent.class %>s</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

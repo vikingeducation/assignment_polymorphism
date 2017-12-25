@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AssignmentPolymorphism</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <nav>
+      <%= link_to 'Applicants', applicants_path %> | <%= link_to 'Jobs', jobs_path %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
