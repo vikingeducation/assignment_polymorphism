@@ -8,4 +8,10 @@ sa = Applicant.find_or_create_by!(name: 'santa')
 
 Tag.find_or_create_by!(name: 'lucrative', taggable_id: b.id, taggable_type: b.class.to_s)
 
+c = Tag.find_or_create_by!(name: 'classy', taggable_id: b.id, taggable_type: b.class.to_s)
+
+k = Tag.find_or_create_by!(name: 'kindness', taggable_id: sa.id, taggable_type: sa.class.to_s)
+
 b.tags.create!(name: 'fancy')
+
+a.tags << c
