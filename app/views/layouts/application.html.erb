@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Applicants', applicants_path %> | <%= link_to 'Jobs', jobs_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
