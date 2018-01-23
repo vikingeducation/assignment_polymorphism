@@ -1,4 +1,7 @@
 assignment_polymorphism
 =======================
 
-Cheer time! When I say "Poly", you say "Morphic", "Gon", "Vore", "Glot" or whatever your receiver returns!
+The polymorphic relationship I used for this assignment is a Review which can be left on a Product or a Seller.
+
+<br>
+Mariah Schneeberger

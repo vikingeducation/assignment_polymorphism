@@ -1,0 +1,8 @@
+<h1><%= @parent_resource.class %> ID: <%= @parent_resource.id %></h1>
+<h2>Name: <%= @parent_resource.name %></h2>
+<h1>Reviews: <%= @reviews.count %></h1>
+<% @reviews.each do |review| %>
+  <h3>Author: <%= review.author %></h3>
+  <h3>Rating: <%= review.rating %></h3>
+  <h3>Review: <%= review.body %></h3>
+<% end %>
